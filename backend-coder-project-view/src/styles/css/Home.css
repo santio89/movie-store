@@ -1,0 +1,171 @@
+.home {
+  width: 100%;
+}
+.home__search {
+  font-weight: bold;
+  color: var(--color-tercero);
+  font-size: var(--font-fluid-sm);
+  margin-bottom: 1em;
+}
+.home__search select, .home__search option {
+  color: var(--color-main);
+  font-weight: bold;
+}
+.home__title {
+  text-align: center;
+  font-size: var(--font-fluid-lg);
+  font-weight: bold;
+  color: var(--color-primero);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.home__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  place-items: center;
+  place-content: center;
+  gap: clamp(0.4rem, 0.4rem + 2vw, 1.4rem);
+}
+.home__user {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  color: var(--color-main);
+}
+.home__user img {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: var(--color-gray);
+}
+.home__upload {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 4px dashed var(--color-gray);
+  padding-bottom: 2em;
+}
+.home__upload h2 {
+  font-size: var(--font-fluid-lg);
+  font-weight: bold;
+  color: var(--color-main);
+}
+.home__upload form {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: start;
+  align-items: start;
+  color: var(--color-tercero);
+  gap: 0.4em;
+  width: clamp(300px, 300px + 2vw, 800px);
+}
+.home__upload form input,
+.home__upload form label, .home__upload form textarea, .home__upload form select {
+  width: 100%;
+  border-radius: 0.2em;
+  padding: 0.2em;
+  color: var(--color-tercero);
+}
+.home__upload form input:valid, .home__upload form input:focus-visible,
+.home__upload form label:valid,
+.home__upload form label:focus-visible, .home__upload form textarea:valid, .home__upload form textarea:focus-visible, .home__upload form select:valid, .home__upload form select:focus-visible {
+  outline: 2px solid var(--color-primero);
+}
+.home__upload form input {
+  outline: 1px dashed var(--color-gray);
+}
+.home__upload form textarea {
+  resize: none;
+  height: auto;
+  outline: 1px dashed var(--color-gray);
+}
+.home__upload form select option {
+  color: var(--color-tercero);
+  background: var(--color-segundo);
+}
+.home__upload form select option[disabled] {
+  color: var(--color-gray);
+}
+.home__upload form button {
+  color: var(--color-main);
+  align-self: center;
+  font-weight: bold;
+  font-size: var(--font-fluid-sm);
+  background: var(--color-tercero);
+  border-radius: 0.4rem;
+  padding: 0.2em 0.4em;
+  margin-top: 1em;
+  width: 86px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.home__upload form button:focus-visible, .home__upload form button:active {
+  outline: 2px solid var(--color-primero);
+}
+
+.serverInfoBtn {
+  font-weight: bold;
+  font-size: var(--font-fluid-sm);
+  color: var(--color-main);
+  background: var(--color-tercero);
+  border-radius: 0.4rem;
+  padding: 0.2em 0.4em;
+  margin-top: 2rem;
+}
+.serverInfoBtn:focus-visible, .serverInfoBtn:active {
+  outline: 2px solid var(--color-primero);
+}
+
+.serverInfoWrapper {
+  font-size: var(--font-fluid-xs);
+  padding: 2em 0;
+  color: var(--color-tercero);
+  box-sizing: border-box;
+}
+.serverInfoWrapper__serverInfo {
+  width: clamp(300px, 100%, 600px);
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1em;
+  padding: 2em 0;
+  overflow-y: scroll;
+}
+.serverInfoWrapper__serverInfo__key {
+  font-weight: bold;
+}
+.serverInfoWrapper__serverInfo p {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: start;
+  word-break: break-all;
+  padding: 0 1em;
+}
+.serverInfoWrapper__serverInfo p:last-of-type {
+  margin-bottom: 0.8em;
+}
+.serverInfoWrapper__serverInfo p span:has(img) {
+  aspect-ratio: 1;
+  width: clamp(80px, 80px + 4vw, 160px);
+  height: clamp(80px, 80px + 4vw, 160px);
+  border-radius: 0.4em;
+}
+.serverInfoWrapper__serverInfo p img {
+  aspect-ratio: 1;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-size: 8px;
+  background: var(--color-gray);
+}/*# sourceMappingURL=Home.css.map */

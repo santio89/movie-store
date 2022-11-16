@@ -1,0 +1,73 @@
+.login, .register{
+    width: clamp(300px, 300px + 4vw, 1800px);
+    margin: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: var(--color-tercero);
+
+    h2{
+        font-size: var(--font-fluid-lg);
+    }
+
+    form{
+        font-size: var(--font-fluid-xs);
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        input, label, textarea {
+            width: 100%;
+            border-radius: .2em;
+            padding: .2em;
+            color: var(--color-tercero);
+
+            &:valid, &:focus-visible{
+                outline: 2px solid var(--color-primero)
+            }
+        }
+
+        label textarea{
+            resize: none !important;
+        }
+
+        ::placeholder, label{
+            color: var(--color-gray);
+        }
+
+        button{
+            font-weight: bold;
+            font-size: var(--font-fluid-sm);
+            color: var(--color-main);
+            background: var(--color-tercero);
+            border-radius: .4rem;
+            padding: .2em .4em;
+            width: 102px;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            &:focus-visible, &:active{
+                outline: 2px solid var(--color-primero)
+            }
+        }
+    }
+
+    a{
+        font-size: var(--font-fluid-xs);
+        align-self: end;
+        font-weight: bold;
+    }
+
+    &__error{
+        color: var(--color-danger);
+        font-weight: bold;
+        font-size: var(--font-fluid-xs);
+    }
+}

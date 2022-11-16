@@ -1,0 +1,69 @@
+.login, .register {
+  width: clamp(300px, 300px + 4vw, 1800px);
+  margin: auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  color: var(--color-tercero);
+}
+.login h2, .register h2 {
+  font-size: var(--font-fluid-lg);
+}
+.login form, .register form {
+  font-size: var(--font-fluid-xs);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.login form input, .login form label, .login form textarea, .register form input, .register form label, .register form textarea {
+  width: 100%;
+  border-radius: 0.2em;
+  padding: 0.2em;
+  color: var(--color-tercero);
+}
+.login form input:valid, .login form input:focus-visible, .login form label:valid, .login form label:focus-visible, .login form textarea:valid, .login form textarea:focus-visible, .register form input:valid, .register form input:focus-visible, .register form label:valid, .register form label:focus-visible, .register form textarea:valid, .register form textarea:focus-visible {
+  outline: 2px solid var(--color-primero);
+}
+.login form label textarea, .register form label textarea {
+  resize: none !important;
+}
+.login form ::-moz-placeholder, .register form ::-moz-placeholder {
+  color: var(--color-gray);
+}
+.login form :-ms-input-placeholder, .register form :-ms-input-placeholder {
+  color: var(--color-gray);
+}
+.login form ::placeholder, .login form label, .register form ::placeholder, .register form label {
+  color: var(--color-gray);
+}
+.login form button, .register form button {
+  font-weight: bold;
+  font-size: var(--font-fluid-sm);
+  color: var(--color-main);
+  background: var(--color-tercero);
+  border-radius: 0.4rem;
+  padding: 0.2em 0.4em;
+  width: 102px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.login form button:focus-visible, .login form button:active, .register form button:focus-visible, .register form button:active {
+  outline: 2px solid var(--color-primero);
+}
+.login a, .register a {
+  font-size: var(--font-fluid-xs);
+  align-self: end;
+  font-weight: bold;
+}
+.login__error, .register__error {
+  color: var(--color-danger);
+  font-weight: bold;
+  font-size: var(--font-fluid-xs);
+}/*# sourceMappingURL=LogInRegister.css.map */

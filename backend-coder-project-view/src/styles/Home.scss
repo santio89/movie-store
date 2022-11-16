@@ -1,0 +1,194 @@
+.home {
+    width: 100%;
+
+    &__search{
+        font-weight: bold;
+        color: var(--color-tercero);
+        font-size: var(--font-fluid-sm);
+        margin-bottom: 1em;
+
+        select, option{
+            color: var(--color-main);
+            font-weight: bold;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-size: var(--font-fluid-lg);
+        font-weight: bold;
+        color: var(--color-primero);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        place-items: center;
+        place-content: center;
+        gap: clamp(.4rem, .4rem + 2vw, 1.4rem);
+    }
+
+    &__user {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 2rem;
+        color: var(--color-main);
+
+        img {
+            aspect-ratio: 1;
+            border-radius: 50%;
+            width: 100px;
+            object-fit: cover;
+            background: var(--color-gray);
+        }
+    }
+
+    &__upload {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 4px dashed var(--color-gray);
+        padding-bottom: 2em;
+
+        h2 {
+            font-size: var(--font-fluid-lg);
+            font-weight: bold;
+            color: var(--color-main)
+        }
+
+        form {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: start;
+            align-items: start;
+            color: var(--color-tercero);
+            gap: .4em;
+            width: clamp(300px, 300px + 2vw, 800px);
+
+            input,
+            label, textarea, select {
+                width: 100%;
+                border-radius: .2em;
+                padding: .2em;
+                color: var(--color-tercero);
+
+                &:valid,
+                &:focus-visible {
+                    outline: 2px solid var(--color-primero)
+                }
+            }
+
+            input{
+                outline: 1px dashed var(--color-gray);
+            }
+
+            textarea{
+                resize: none;
+                height: auto;
+                outline: 1px dashed var(--color-gray);
+            }
+
+            select{
+                option{
+                    color:var(--color-tercero);
+                    background: var(--color-segundo);
+                    
+                    &[disabled]{
+                        color: var(--color-gray);
+                    }
+                }
+            }
+
+            button {
+                color: var(--color-main);
+                align-self: center;
+                font-weight: bold;
+                font-size: var(--font-fluid-sm);
+                background: var(--color-tercero);
+                border-radius: .4rem;
+                padding: .2em .4em;
+                margin-top: 1em;
+                width: 86px;
+                height: 44px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+
+                &:focus-visible, &:active {
+                    outline: 2px solid var(--color-primero)
+                }
+            }
+        }
+    }
+}
+
+.serverInfoBtn {
+    font-weight: bold;
+    font-size: var(--font-fluid-sm);
+    color: var(--color-main);
+    background: var(--color-tercero);
+    border-radius: .4rem;
+    padding: .2em .4em;
+    margin-top: 2rem;
+
+    &:focus-visible, &:active {
+        outline: 2px solid var(--color-primero)
+    }
+}
+
+.serverInfoWrapper {
+    font-size: var(--font-fluid-xs);
+    padding: 2em 0;
+    color: var(--color-tercero);
+    box-sizing: border-box;
+
+    &__serverInfo {
+        width: clamp(300px, 100%, 600px);
+        aspect-ratio: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 1em;
+        padding: 2em 0;
+        overflow-y: scroll;
+
+        &__key {
+            font-weight: bold;
+        }
+
+        p {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: start;
+            word-break: break-all;
+            padding: 0 1em;
+
+            &:last-of-type{
+                margin-bottom: .8em;
+            }
+
+            span:has(img){
+                aspect-ratio: 1;
+                width: clamp(80px, 80px + 4vw, 160px);
+                height: clamp(80px, 80px + 4vw, 160px);
+                border-radius: .4em;
+            }
+
+            img{
+                aspect-ratio: 1;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                font-size: 8px;
+                background: var(--color-gray)
+            }
+        }
+    }
+}

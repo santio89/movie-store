@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* colores basic */
+    --color-main: #20af9c;
+    --color-main-dark: #078e7c;
+    --color-white: #ffffff;
+    --color-black: rgb(30 , 30 , 30 );
+    --color-gray: rgb(120, 120, 120);
+    --color-danger: rgb(222, 49, 49);
+    --color-white-rgb: 255, 255, 255;
+    --color-black-rgb: 20, 20, 20;
+
+    /* colores schema*/
+    --color-primero: var(--color-main);
+    --color-segundo: var(--color-white);
+    --color-tercero: var(--color-black);
+    --color-segundo-rgb: var(--color-white-rgb);
+    --color-tercero-rgb: var(--color-black-rgb);
+
+    /* font-size basic */
+    --font-xxs: 1rem;
+    --font-xs: 1.1rem;
+    --font-sm: 1.2rem;
+    --font-smm: 1.28rem;
+    --font-md: 1.4rem;
+    --font-lg: 2rem;
+    --font-xl: 2.4rem;
+    --font-xxl: 3rem;
+    --font-fluid-xs: clamp(.8rem, .8rem + 1vw, 1.2rem);
+    --font-fluid-sm: clamp(1rem, 1rem + 1vw, 1.5rem);
+    --font-fluid-md: clamp(1rem, 1rem + 1.4vw, 1.8rem);
+    --font-fluid-mdd: clamp(1.2rem, 1.2rem + 1.4vw, 2rem);
+    --font-fluid-lg: clamp(1.8rem, 1.8rem + 1vw, 2.4rem);
+    --font-fluid-xl: clamp(2rem, 2rem + 1.2vw, 3.4rem);
+    --font-fluid-xxl: clamp(2.2rem, 2.2rem + 2.4vw, 4.8rem);
+
+    /* font-size schema */
+    --font-banner: /* var(--font-fluid-mdd) */var(--font-fluid-xxl);
+    --font-title: var(--font-fluid-lg);
+    --font-subt: var(--font-fluid-md);
+    --font-p: var(--font-smm);
+}
+
+html {
+    /* INICIO SCROLLBAR */
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-tercero) var(--color-segundo);
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    /* track */
+    ::-webkit-scrollbar-track {
+        background: var(--color-segundo);
+    }
+
+    /* handle */
+    ::-webkit-scrollbar-thumb {
+        background: var(--color-tercero);
+        border-radius: 12px;
+    }
+
+    /* FIN SCROLLBAR */
+}
+
+::selection{
+    color: var(--color-white);
+    background: var(--color-primero);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-segundo);
+}
+
+#root,
+.root-theme {
+    background-color: var(--color-segundo);
+    width: 100%;
+    min-height: 100vh;
+}
+
+.main-content{
+    padding-top: calc(8rem + 2rem);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-flow: column;
+    width: 100%;
+    min-height: calc(100vh - 8rem);
+}
+
+.waiting{
+    cursor: wait;
+}
+
+.dark-theme {
+    --color-segundo: var(--color-black);
+    --color-tercero: var(--color-white);
+    --color-segundo-rgb: var(--color-black-rgb);
+    --color-tercero-rgb: var(--color-white-rgb);
+}
+
+.section-full {
+    width: 100%;
+    min-height: 80vh;
+    padding: clamp(.1rem, .1rem + 1vw, 1rem) clamp(.4rem, .4rem + 1vw, 4rem);
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+@media (max-width: 577px) {
+    :root {
+        --font-p: var(--font-xs);
+    }
+}
+
+@media (max-width: 460px) {
+    :root {
+        --font-p: var(--font-xxs);
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes translateFromLeft {
+    0% {
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes translateFromRight {
+    0% {
+        transform: translateX(120%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes opacityStart {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bannerGrad {
+    0% {
+        background-position: bottom left;
+    }
+
+    25% {
+        background-position: top left;
+    }
+
+    50% {
+        background-position: top right;
+    }
+
+    75% {
+        background-position: bottom right;
+    }
+
+    100% {
+        background-position: bottom left;
+    }
+}
+
+
+/* loader */
+.loader {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: block;
+    margin:15px auto;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--color-main);
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, 50%);
+    border-radius: 50%;
+  }
+  .loader::before {
+    left: auto;
+    right: 0;
+    background: var(--color-gray);
+    transform: translate(50%, 100%);
+  }
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 

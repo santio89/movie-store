@@ -1,0 +1,180 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: clamp(1em, 1em + 0.8vw, 4em) clamp(0.4em, 0.4em + 0.2vw, 1em);
+  color: var(--color-tercero);
+}
+
+.inactive {
+  display: none;
+}
+
+.btn-active {
+  box-shadow: 0px 1px 0 0 rgba(var(--color-tercero-rgb), 0.8);
+}
+
+.row,
+.row-btn,
+.row-links {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.row .title,
+.row-btn .title,
+.row-links .title {
+  font-size: 2.7em;
+  font-weight: bold;
+  margin-bottom: 1.3em;
+}
+.row .col,
+.row-btn .col,
+.row-links .col {
+  text-align: justify;
+}
+.row .col button,
+.row-btn .col button,
+.row-links .col button {
+  line-height: 1.8;
+}
+.row .col button:hover,
+.row-btn .col button:hover,
+.row-links .col button:hover {
+  box-shadow: 0px 1px 0 0 rgba(var(--color-tercero-rgb), 0.8);
+}
+.row .text,
+.row-btn .text,
+.row-links .text {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+.row .text .text-left-align,
+.row-btn .text .text-left-align,
+.row-links .text .text-left-align {
+  margin-left: 1em;
+  margin-bottom: 0.2em;
+  display: block;
+}
+
+.row-links {
+  gap: 7em;
+  margin-bottom: 2.5em;
+}
+.row-links h3 {
+  font-size: 1.3em;
+}
+
+.paragraph {
+  margin-top: 0;
+  margin-bottom: 4em;
+}
+.paragraph h4 {
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+}
+
+.row-btn {
+  justify-content: center;
+}
+.row-btn .btn-volver {
+  font-size: 1.2em;
+  margin-top: 5em;
+  color: var(--color-segundo);
+  background: var(--color-primero);
+  padding: 0.4em 1.8em;
+  border-radius: 0.4em;
+}
+
+@media only screen and (max-width: 576px) {
+  .row .title,
+.row-btn .title,
+.row-links .title {
+    font-size: 1.25em;
+  }
+  .row .text,
+.row-btn .text,
+.row-links .text {
+    font-size: 0.6em;
+  }
+  .row-links {
+    gap: 1em;
+    margin-bottom: 1em;
+  }
+  .row-links h3 {
+    font-size: 0.7em;
+  }
+  .paragraph {
+    margin-bottom: 2.5em;
+  }
+  .paragraph h4 {
+    font-size: 0.6em;
+  }
+  .row-btn .btn-volver {
+    font-size: 0.9em;
+  }
+}
+@media only screen and (max-width: 766px) and (min-width: 577px) {
+  .row .title,
+.row-btn .title,
+.row-links .title {
+    font-size: 1.9em;
+  }
+  .row .text,
+.row-btn .text,
+.row-links .text {
+    font-size: 0.7em;
+  }
+  .row-links {
+    gap: 1.1em;
+    margin-bottom: 1em;
+  }
+  .row-links h3 {
+    font-size: 0.8em;
+  }
+  .paragraph {
+    margin-bottom: 2.5em;
+  }
+  .paragraph h4 {
+    font-size: 0.7em;
+  }
+  .row-btn .btn-volver {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 767px) {
+  .row .title,
+.row-btn .title,
+.row-links .title {
+    font-size: 2em;
+  }
+  .row .text,
+.row-btn .text,
+.row-links .text {
+    font-size: 0.9em;
+  }
+  .row-links {
+    gap: 1.9em;
+    margin-bottom: 1em;
+  }
+  .row-links h3 {
+    font-size: 1em;
+  }
+  .paragraph {
+    margin-bottom: 2.5em;
+  }
+  .paragraph h4 {
+    font-size: 0.9em;
+  }
+  .row-btn .btn-volver {
+    font-size: 1.1em;
+  }
+}
+@media only screen and (max-width: 1298px) and (min-width: 993px) {
+  .row-links {
+    gap: 3em;
+    margin-bottom: 1em;
+  }
+  .row-links h3 {
+    font-size: 1.2em;
+  }
+}/*# sourceMappingURL=Help.css.map */

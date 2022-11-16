@@ -1,0 +1,171 @@
+.producto {
+    animation: opacityStart 1.2s ease-in;
+    max-width: 340px;
+    color: var(--color-tercero);
+    position: relative;
+    overflow: hidden;
+
+    &__innerContainer {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: start;
+        position: relative;
+        width: 100%;
+        border-radius: 1.8em;
+        animation: opacityStart .6s ease-in;
+    }
+
+    &__innerTextContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        aspect-ratio: 7/11;
+        border-radius: 1.4em;
+        overflow: hidden;
+    }
+
+    &__innerText {
+        width: 100%;
+        aspect-ratio: 7/11;
+        padding: .9em;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: start;
+        align-items: center;
+        background-color: rgba(var(--color-segundo-rgb), .8);
+        outline: 1px solid var(--color-segundo);
+        border: 1px solid var(--color-segundo);
+        backdrop-filter: blur(2px);
+        animation: opacityStart .3s ease-in-out;
+        white-space: pre-line;
+        line-height: 1.8;
+        font-size: var(--font-p);
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+    }
+
+    &__imgContainer {
+        width: 100%;
+        border-radius: 1.8em;
+        aspect-ratio: 7/11;
+        min-width: 220px;
+        background: var(--color-segundo);
+        overflow: hidden;
+        position: relative;
+
+        img {
+            aspect-ratio: 7/11;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1.8em;
+            background: var(--color-gray)
+        }
+
+        &:hover .producto__expand,
+        &:focus-visible .producto__expand {
+            visibility: visible;
+        }
+    }
+
+    &__name {
+        font-size: var(--font-p);
+        padding: .28em .1em .56em .1em;
+        word-break: break-all;
+        line-height: 1.2;
+    }
+
+    &__imgModal {
+        margin: auto;
+        width: clamp(300px, 300px + 10vw, 600px);
+        aspect-ratio: 7/11;
+        border: none;
+        border-radius: 2em;
+        overflow: hidden;
+        background: var(--color-segundo);
+        box-shadow: 0 0 4px 0 var(--color-segundo);
+        border: 2px solid var(--color-segundo);
+
+        button {
+            color: var(--color-segundo);
+            text-shadow: 2px 2px 0 var(--color-tercero);
+            font-size: var(--font-fluid-lg);
+            font-weight: bold;
+            position: absolute;
+            top: 1%;
+            right: 4%;
+
+            &:hover,
+            &:focus-visible {
+                color: var(--color-tercero);
+                text-shadow: 2px 2px 0 var(--color-segundo);
+            }
+        }
+
+        &::backdrop {
+            background: rgba(20, 20, 20, .8);
+            backdrop-filter: blur(2px);
+        }
+
+        img {
+            aspect-ratio: 7/11;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+            background: var(--color-gray);
+        }
+    }
+
+    &__expand {
+        position: absolute;
+        bottom: 4%;
+        right: 4%;
+        color: var(--color-segundo);
+        filter: drop-shadow(1px 1px 0 var(--color-tercero));
+        cursor: pointer;
+        pointer-events: none;
+        visibility: hidden;
+
+        &:hover,
+        &:focus-visible {
+            visibility: visible;
+        }
+    }
+
+    &__dots {
+        align-self: end;
+        cursor: pointer;
+        border-radius: 50%;
+        padding: .1em;
+        margin: -1em .2em .2em 0;
+        color: var(--color-tercero);
+
+        &.active {
+            color: var(--color-primero);
+        }
+    }
+
+    &__controlsContainer{
+        font-size: var(--font-fluid-xl);
+        display: flex;
+        justify-content: center;
+        gap: 20%;
+        width: 100%;
+        font-weight: bold;
+        color: var(--color-primero);
+        line-height: 1;
+    }
+
+    &.waiting{
+        button{
+            cursor: wait;
+            pointer-events: none;
+        }
+    }
+}

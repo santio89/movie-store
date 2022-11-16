@@ -1,0 +1,75 @@
+.container.NotFound {
+  display: flex;
+  flex-direction: column;
+  margin: clamp(1em, 1em + 0.8vw, 4em) clamp(0.4em, 0.4em + 0.2vw, 1em);
+  color: var(--color-tercero);
+}
+
+.row.NotFound,
+.row-btn.NotFound {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+.row.NotFound .title,
+.row-btn.NotFound .title {
+  font-size: var(--font-fluid-xxl);
+  font-weight: bold;
+  margin-bottom: 0.2em;
+  margin-top: 0.1em;
+}
+.row.NotFound .col,
+.row-btn.NotFound .col {
+  text-align: justify;
+}
+.row.NotFound .text,
+.row-btn.NotFound .text {
+  font-size: var(--font-subt);
+  color: var(--color-primero);
+}
+.row.NotFound .div-img,
+.row-btn.NotFound .div-img {
+  text-align: center;
+  width: clamp(280px, 280px + 80%, 620px);
+  border-radius: 1em;
+  margin: auto;
+  background: linear-gradient(45deg, var(--color-primero), coral);
+  position: relative;
+}
+.row.NotFound .div-img .img,
+.row-btn.NotFound .div-img .img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.8em;
+  filter: contrast(1.04) brightness(1.04);
+  background: var(--color-segundo);
+}
+
+.row-btn.NotFound {
+  justify-content: center;
+}
+.row-btn.NotFound .btn-volver {
+  margin-top: 2em;
+  color: var(--color-segundo);
+  background: var(--color-primero);
+  padding: 0.4em 1.8em;
+  border-radius: 0.4em;
+}
+
+@media only screen and (max-width: 576px) {
+  .btn-volver {
+    font-size: 0.8em;
+  }
+}
+@media only screen and (max-width: 766px) and (min-width: 577px) {
+  .btn-volver {
+    font-size: 0.9em;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 767px) {
+  .btn-volver {
+    font-size: 1em;
+  }
+}/*# sourceMappingURL=NotFound.css.map */

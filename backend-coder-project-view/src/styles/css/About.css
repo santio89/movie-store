@@ -1,0 +1,69 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: clamp(1em, 1em + 0.8vw, 4em) clamp(0.4em, 0.4em + 0.2vw, 1em);
+  color: var(--color-tercero);
+}
+
+.row, .row-btn {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.row .title, .row-btn .title {
+  font-size: 1.7em;
+  font-weight: bold;
+  margin-bottom: 2em;
+}
+.row .col, .row-btn .col {
+  text-align: justify;
+}
+.row .text, .row-btn .text {
+  font-size: 1em;
+  margin-bottom: 1.5em;
+}
+
+.row-btn {
+  justify-content: center;
+}
+.row-btn .btn-volver {
+  margin-top: 5em;
+  color: var(--color-segundo);
+  background: var(--color-primero);
+  padding: 0.4em 1.8em;
+  border-radius: 0.4em;
+}
+
+@media only screen and (max-width: 576px) {
+  .row .title, .row-btn .title {
+    font-size: 1.1em;
+  }
+  .row .text, .row-btn .text {
+    font-size: 0.8em;
+  }
+  .btn-volver {
+    font-size: 0.8em;
+  }
+}
+@media only screen and (max-width: 766px) and (min-width: 577px) {
+  .row .title, .row-btn .title {
+    font-size: 1.2em;
+  }
+  .row .text, .row-btn .text {
+    font-size: 0.9em;
+  }
+  .btn-volver {
+    font-size: 0.9em;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 767px) {
+  .row .title, .row-btn .title {
+    font-size: 1.4em;
+  }
+  .row .text, .row-btn .text {
+    font-size: 1em;
+  }
+  .btn-volver {
+    font-size: 1em;
+  }
+}/*# sourceMappingURL=About.css.map */
