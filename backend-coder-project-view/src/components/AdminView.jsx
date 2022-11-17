@@ -132,7 +132,7 @@ export default function AdminView() {
 
           <label htmlFor="uploadProd__desc">Descripcion: </label>
           <textarea rows="4" type="text" name="descripcion" id="uploadProd__desc" required
-            maxLength={100} title="Ingresar descripcion" value={formDescripcion} onChange={e => { setFormDescripcion(e.target.value) }} />
+            maxLength={500} title="Ingresar descripcion" value={formDescripcion} onChange={e => { setFormDescripcion(e.target.value) }} />
           <button disabled={sentLoading}>{sentLoading ? <span className="loader"></span> : <>Enviar</>}</button>
         </form>
       </div>
