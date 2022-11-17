@@ -4,7 +4,7 @@ Proyecto Full-Stack - E-Commerce de películas
 
 
 
--Frontend: ReactJS. Demo: https://backend-coder-project-view.netlify.app/
+-Frontend: ReactJS. Demo: https://movie-store-netlify.netlify.app/
 
 
 
