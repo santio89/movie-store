@@ -25,8 +25,9 @@
     &__grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        place-items: center;
         place-content: center;
+        place-items: center;
+        align-items: start;
         gap: clamp(.4rem, .4rem + 2vw, 1.4rem);
     }
 
