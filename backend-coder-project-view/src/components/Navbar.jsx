@@ -31,15 +31,17 @@ const Navbar = () => {
             <div className={`navbar__links${navOpen ? " is-active" : ""}`}>
                 {user ?
                     <>
-                        <div className="cart-info">
-                            <p>{cartItems} items - ${cartTotal}</p>
-                        </div>
                         {user.role === 'user' &&
-                            <div className='link-btn'>
-                                <NavLink className="btn" to='/cart'>
-                                    <p className="titulo-btn">CART</p>
-                                </NavLink>
-                            </div>
+                            <>
+                                <div className="cart-info">
+                                    <p>{cartItems} items - ${cartTotal}</p>
+                                </div>
+                                <div className='link-btn'>
+                                    <NavLink className="btn" to='/cart'>
+                                        <p className="titulo-btn">CART</p>
+                                    </NavLink>
+                                </div>
+                            </>
                         }
                         <div className='link-btn'>
                             <button className="btn" onClick={() => logout()}>
