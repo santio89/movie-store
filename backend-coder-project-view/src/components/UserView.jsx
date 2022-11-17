@@ -67,7 +67,7 @@ export default function UserView() {
         <button onClick={() => { serverInfoModal.current.close() }}>X</button>
       </dialog>
       <div className="home__list">
-        <h2 className='home__title'>LISTADO DE PRODUCTOS</h2>
+        <h2 className='home__title'>LISTADO DE PELÍCULAS</h2>
         <div className="home__search">
           <label htmlFor='home__searchFilter'>Filtrar: </label>
           <select value={searchCat} id="home__searchFilter" onChange={(e) => {

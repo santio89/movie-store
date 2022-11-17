@@ -100,7 +100,7 @@ export default function AdminView() {
      
 
       <div className="home__upload">
-        <h2>CARGAR PRODUCTO</h2>
+        <h2>CARGAR PELÍCULA</h2>
         <form className="home__form" onSubmit={handleSubmit}>
           <label htmlFor="uploadProd__title">Nombre: </label>
           <input type="text" name="nombre" id="uploadProd__title" required maxLength={50}
@@ -138,7 +138,7 @@ export default function AdminView() {
       </div>
 
       <div className="home__list">
-        <h2 className='home__title'>LISTADO DE PRODUCTOS</h2>
+        <h2 className='home__title'>LISTADO DE PELÍCULAS</h2>
         <div className="home__search">
           <label htmlFor='home__searchFilter'>Filtrar: </label>
           <select value={searchCat} id="home__searchFilter" onChange={(e) => {
