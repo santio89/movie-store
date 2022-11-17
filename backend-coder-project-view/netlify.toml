@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/api/*"
-  to = "https://movie-store.onrender.com/api/:splat"
+  to = "https://movie-store-back.onrender.com/api/:splat"
   status = 200
 
 [[redirects]]
