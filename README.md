@@ -22,6 +22,10 @@ Admin View:
 
 
 
+-
+Demo Front: https://backend-coder-project-view.netlify.app/
 
-Demo: https://backend-coder-project-view.netlify.app/
+
+
+Demo Back: https://movie-store-back.onrender.com/
 
