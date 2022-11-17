@@ -4,11 +4,11 @@ Proyecto Full-Stack - E-Commerce de películas
 
 
 
-Backend: Node-Express-Mongo
+-Frontend: ReactJS. Demo: https://backend-coder-project-view.netlify.app/
 
 
 
-Frontend: ReactJS
+-Backend: Node-Express-Mongo. Demo https://movie-store-back.onrender.com/
 
 
 
@@ -22,9 +22,5 @@ Frontend: ReactJS
 
 
 
--Demo Front: https://backend-coder-project-view.netlify.app/
 
-
-
--Demo Back: https://movie-store-back.onrender.com/
 
