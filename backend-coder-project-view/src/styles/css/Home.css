@@ -25,7 +25,7 @@
   place-content: center;
   place-items: center;
   align-items: start;
-  gap: clamp(0.4rem, 0.4rem + 2vw, 1.4rem);
+  gap: clamp(0.4rem, 0.4rem + 2vw, 1.4rem) clamp(0.8rem, 0.8rem + 2vw, 2rem);
 }
 .home__user {
   display: flex;

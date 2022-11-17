@@ -36,6 +36,7 @@
   margin: auto;
   background: linear-gradient(45deg, var(--color-primero), coral);
   position: relative;
+  font-size: var(--font-fluid-md);
 }
 .row.NotFound .div-img .img,
 .row-btn.NotFound .div-img .img {
