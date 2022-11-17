@@ -150,6 +150,7 @@
 
     &__serverInfo {
         width: clamp(300px, 100%, 600px);
+        height: 100%;
         aspect-ratio: 1;
         display: flex;
         flex-direction: column;
