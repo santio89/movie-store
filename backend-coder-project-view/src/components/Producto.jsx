@@ -30,14 +30,13 @@ export default function Producto({ item }) {
 
 
                 <p className='producto__name'>{nombre}</p>
-                <p className='producto__priceInfo'><span>${precio}</span><button className={`producto__dots ${info && "active"}`} onClick={() => setInfo(setInfo => !setInfo)}><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
-                </svg></button></p>
-
                 {user.role === 'user' && <div className="producto__controlsContainer">
                     <button className="producto__controlsContainer__remove" onClick={async () => {setWaiting(true); await removeFromCart(id); setWaiting(false)}}>-</button>
                     <button className="producto__controlsContainer__add" onClick={ async () => {setWaiting(true); await addToCart(id); setWaiting(false)}}>+</button>
                 </div>}
+                <p className='producto__priceInfo'><span>${precio}</span><button className={`producto__dots ${info && "active"}`} onClick={() => setInfo(setInfo => !setInfo)}><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                </svg></button></p>
                
                 <dialog className='producto__imgModal' ref={imgModal}>
                     <button onClick={() => { imgModal.current.close() }}>X</button>
