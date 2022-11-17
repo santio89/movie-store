@@ -1,10 +1,13 @@
 .producto {
   -webkit-animation: opacityStart 1.2s ease-in;
           animation: opacityStart 1.2s ease-in;
+  width: 100%;
   max-width: 340px;
   color: var(--color-tercero);
   position: relative;
   overflow: hidden;
+  background: var(--color-gray-dark);
+  border-radius: 1.8em;
 }
 .producto__innerContainer {
   display: flex;
@@ -13,7 +16,7 @@
   align-items: start;
   position: relative;
   width: 100%;
-  border-radius: 1.8em;
+  border-radius: 1.8em 1.8em 0 0;
   -webkit-animation: opacityStart 0.6s ease-in;
           animation: opacityStart 0.6s ease-in;
 }
@@ -23,7 +26,7 @@
   left: 0;
   width: 100%;
   aspect-ratio: 7/11;
-  border-radius: 1.4em;
+  border-radius: 1.4em 1.4em 0 0;
   overflow: hidden;
 }
 .producto__innerText {
@@ -31,8 +34,9 @@
   aspect-ratio: 7/11;
   padding: 0.9em;
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   justify-content: start;
+  gap: 0.4em;
   align-items: center;
   background-color: rgba(var(--color-segundo-rgb), 0.8);
   outline: 1px solid var(--color-segundo);
@@ -42,18 +46,21 @@
   -webkit-animation: opacityStart 0.3s ease-in-out;
           animation: opacityStart 0.3s ease-in-out;
   white-space: pre-line;
-  line-height: 1.8;
   font-size: var(--font-p);
   overflow-y: auto;
+  line-height: 1.4;
+}
+.producto__innerText h4 {
+  text-shadow: 0 0 8px var(--color-main);
 }
 .producto__innerText::-webkit-scrollbar {
   width: 4px;
 }
 .producto__imgContainer {
   width: 100%;
-  border-radius: 1.8em;
-  aspect-ratio: 7/11;
   min-width: 220px;
+  border-radius: 1.8em 1.8em 0 0;
+  aspect-ratio: 7/11;
   background: var(--color-segundo);
   overflow: hidden;
   position: relative;
@@ -61,20 +68,44 @@
 .producto__imgContainer img {
   aspect-ratio: 7/11;
   width: 100%;
+  min-width: 100%;
+  max-width: 100%;
   height: 100%;
+  min-height: 100%;
+  max-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 1.8em;
+  border-radius: 1.8em 1.8em 0 0;
   background: var(--color-gray);
 }
 .producto__imgContainer:hover .producto__expand, .producto__imgContainer:focus-visible .producto__expand {
   visibility: visible;
 }
 .producto__name {
-  font-size: var(--font-p);
-  padding: 0.28em 0.1em 0.56em 0.1em;
-  word-break: break-all;
-  line-height: 1.2;
+  font-size: var(--font-md);
+  word-break: keep-all;
+  line-height: 1.4;
+  padding: 0 0.1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-align: center;
+  width: 100%;
+  color: var(--color-main);
+  font-weight: bold;
+  margin: 0.2em 0;
+}
+.producto__priceInfo {
+  font-size: var(--font-sm);
+  line-height: 1.4;
+  padding: 0 0.1em;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
 }
 .producto__imgModal {
   margin: auto;
@@ -133,12 +164,12 @@
   visibility: visible;
 }
 .producto__dots {
-  align-self: end;
   cursor: pointer;
   border-radius: 50%;
   padding: 0.1em;
-  margin: -1em 0.2em 0.2em 0;
   color: var(--color-tercero);
+  display: flex;
+  align-items: center;
 }
 .producto__dots.active {
   color: var(--color-primero);

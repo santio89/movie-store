@@ -28,7 +28,7 @@
         place-content: center;
         place-items: center;
         align-items: start;
-        gap: clamp(.4rem, .4rem + 2vw, 1.4rem);
+        gap: clamp(.4rem, .4rem + 2vw, 1.4rem) clamp(.8rem, .8rem + 2vw, 2rem);
     }
 
     &__user {
