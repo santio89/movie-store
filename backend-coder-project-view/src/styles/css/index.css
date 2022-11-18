@@ -4,7 +4,7 @@
   --color-main: #20af9c;
   --color-main-dark: #078e7c;
   --color-white: #ffffff;
-  --color-black: rgb(30 , 30 , 30 );
+  --color-black: rgb(30, 30, 30);
   --color-gray: rgb(120, 120, 120);
   --color-gray-dark: rgb(60, 60, 60);
   --color-danger: rgb(222, 49, 49);
@@ -33,7 +33,9 @@
   --font-fluid-xl: clamp(2rem, 2rem + 1.2vw, 3.4rem);
   --font-fluid-xxl: clamp(2.2rem, 2.2rem + 2.4vw, 4.8rem);
   /* font-size schema */
-  --font-banner: /* var(--font-fluid-mdd) */var(--font-fluid-xxl);
+  --font-banner:
+      /* var(--font-fluid-mdd) */
+      var(--font-fluid-xxl);
   --font-title: var(--font-fluid-lg);
   --font-subt: var(--font-fluid-md);
   --font-p: var(--font-smm);
@@ -108,6 +110,11 @@ body {
   padding: clamp(0.1rem, 0.1rem + 1vw, 1rem) clamp(0.4rem, 0.4rem + 1vw, 4rem);
   max-width: 1280px;
   margin: 0 auto;
+}
+
+.errorModal {
+  margin: auto;
+  width: clamp(300px, 300px + 10vw, 600px);
 }
 
 @media (max-width: 577px) {

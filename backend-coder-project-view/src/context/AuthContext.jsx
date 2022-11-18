@@ -12,7 +12,7 @@ export default function AuthContextProvider({ children }) {
       if (res.data.status === "ok") {
         setUser(null)
       }
-    })
+    }).catch((e) => { console.log("error logging out: ", e) })
   }
 
   useEffect(() => {

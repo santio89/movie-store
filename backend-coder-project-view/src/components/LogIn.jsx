@@ -9,7 +9,7 @@ export default function LogIn() {
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState(false);
   const { user, setUser } = useContext(AuthContext);
-  const [sentLoading, setSentLoading] = useState(false)
+  const [sentLoading, setSentLoading] = useState(false);
 
 
   const handleSubmit = (event) => {
@@ -34,7 +34,7 @@ export default function LogIn() {
       }
 
       setSentLoading(false)
-    }).catch(e=>console.log("error logging in: ",e))
+    }).catch(e=>{console.log("error logging in: ",e)})
   }
 
   return (

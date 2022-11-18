@@ -5,7 +5,7 @@
     --color-main: #20af9c;
     --color-main-dark: #078e7c;
     --color-white: #ffffff;
-    --color-black: rgb(30 , 30 , 30 );
+    --color-black: rgb(30, 30, 30);
     --color-gray: rgb(120, 120, 120);
     --color-gray-dark: rgb(60, 60, 60);
     --color-danger: rgb(222, 49, 49);
@@ -37,7 +37,9 @@
     --font-fluid-xxl: clamp(2.2rem, 2.2rem + 2.4vw, 4.8rem);
 
     /* font-size schema */
-    --font-banner: /* var(--font-fluid-mdd) */var(--font-fluid-xxl);
+    --font-banner:
+        /* var(--font-fluid-mdd) */
+        var(--font-fluid-xxl);
     --font-title: var(--font-fluid-lg);
     --font-subt: var(--font-fluid-md);
     --font-p: var(--font-smm);
@@ -68,7 +70,7 @@ html {
     /* FIN SCROLLBAR */
 }
 
-::selection{
+::selection {
     color: var(--color-white);
     background: var(--color-primero);
 }
@@ -85,7 +87,7 @@ body {
     min-height: 100vh;
 }
 
-.main-content{
+.main-content {
     padding-top: calc(8rem + 2rem);
     display: flex;
     justify-content: start;
@@ -95,7 +97,7 @@ body {
     min-height: calc(100vh - 8rem);
 }
 
-.waiting{
+.waiting {
     cursor: wait;
 }
 
@@ -112,6 +114,11 @@ body {
     padding: clamp(.1rem, .1rem + 1vw, 1rem) clamp(.4rem, .4rem + 1vw, 4rem);
     max-width: 1280px;
     margin: 0 auto;
+}
+
+.errorModal {
+    margin: auto;
+    width: clamp(300px, 300px + 10vw, 600px);
 }
 
 @media (max-width: 577px) {
@@ -199,14 +206,15 @@ body {
     height: 20px;
     border-radius: 50%;
     display: block;
-    margin:15px auto;
+    margin: 15px auto;
     position: relative;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
-  }
-  .loader::after,
-  .loader::before {
-    content: '';  
+}
+
+.loader::after,
+.loader::before {
+    content: '';
     box-sizing: border-box;
     position: absolute;
     left: 0;
@@ -216,19 +224,21 @@ body {
     height: 10px;
     transform: translate(-50%, 50%);
     border-radius: 50%;
-  }
-  .loader::before {
+}
+
+.loader::before {
     left: auto;
     right: 0;
     background: var(--color-gray);
     transform: translate(50%, 100%);
-  }
+}
 
 @keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-} 
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
