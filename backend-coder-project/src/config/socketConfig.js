@@ -29,5 +29,10 @@ export const socketConfig = (expressServer) => {
             const savedMessage = await chatController.saveChat(mensajeEnvio);
             io.emit("server:mensaje", savedMessage.data);
         })
+
+        /* errores del back en requests los manejo con try/catch y se muestran por consola en front. para errores no manejados, los mando con socket y se muestran en front con un modal y el detalle */
+        process.on('uncaughtException', (error) => {
+            socket.emit("server: uncaughtException", error)
+        });
     })
 }
