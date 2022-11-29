@@ -8,6 +8,10 @@
   overflow: hidden;
   background: linear-gradient(135deg, var(--color-main), var(--color-black));
   border-radius: 1.8em;
+  outline: 2px solid var(--color-gray-dark);
+}
+.producto:hover {
+  outline: 2px solid var(--color-main);
 }
 .producto__innerContainer {
   display: flex;
