@@ -6,7 +6,7 @@
   color: var(--color-tercero);
   position: relative;
   overflow: hidden;
-  background: var(--color-gray-dark);
+  background: linear-gradient(135deg, var(--color-main), var(--color-black));
   border-radius: 1.8em;
 }
 .producto__innerContainer {
@@ -46,11 +46,12 @@
   -webkit-animation: opacityStart 0.3s ease-in-out;
           animation: opacityStart 0.3s ease-in-out;
   white-space: pre-line;
-  font-size: var(--font-p);
+  font-size: var(--font-xxs);
   overflow-y: auto;
   line-height: 1.4;
 }
 .producto__innerText h4 {
+  font-size: var(--font-mdd);
   text-shadow: 0 0 8px var(--color-main);
 }
 .producto__innerText::-webkit-scrollbar {
@@ -82,7 +83,8 @@
   visibility: visible;
 }
 .producto__name {
-  font-size: var(--font-md);
+  font-size: var(--font-mdd);
+  text-shadow: 1px 1px 0 var(--color-black);
   word-break: keep-all;
   line-height: 1.4;
   padding: 0 0.1em;
@@ -95,10 +97,11 @@
   width: 100%;
   color: var(--color-main);
   font-weight: bold;
-  margin: 0.2em 0;
+  margin: 0.4rem 0 1rem 0;
+  padding: 0 0.2rem;
 }
 .producto__priceInfo {
-  font-size: var(--font-md);
+  font-size: var(--font-mdd);
   line-height: 1.4;
   padding: 0 1em;
   overflow: hidden;
@@ -107,6 +110,7 @@
   justify-content: space-between;
   align-items: end;
   margin-bottom: 0.4em;
+  color: var(--color-white);
 }
 .producto__imgModal {
   margin: auto;
@@ -168,22 +172,25 @@
   cursor: pointer;
   border-radius: 50%;
   padding: 0.1em;
-  color: var(--color-tercero);
+  color: var(--color-white);
   display: flex;
   align-items: center;
 }
-.producto__dots.active {
-  color: var(--color-primero);
+.producto__dots:hover, .producto__dots.active {
+  color: var(--color-main);
 }
 .producto__controlsContainer {
-  font-size: var(--font-fluid-xl);
+  font-size: var(--font-fluid-lg);
   display: flex;
   justify-content: center;
   gap: 20%;
   width: 100%;
   font-weight: bold;
+  color: var(--color-white);
+  line-height: 0.4;
+}
+.producto__controlsContainer button:hover {
   color: var(--color-primero);
-  line-height: 1;
 }
 .producto.waiting button {
   cursor: wait;
