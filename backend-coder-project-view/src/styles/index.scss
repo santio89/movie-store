@@ -7,7 +7,7 @@
     --color-white: #ffffff;
     --color-black: rgb(30, 30, 30);
     --color-gray: rgb(120, 120, 120);
-    --color-gray-dark: rgb(60, 60, 60);
+    --color-gray-dark: rgb(50, 50, 50);
     --color-danger: rgb(222, 49, 49);
     --color-white-rgb: 255, 255, 255;
     --color-black-rgb: 20, 20, 20;
@@ -29,7 +29,9 @@
     --font-lg: 2rem;
     --font-xl: 2.4rem;
     --font-xxl: 3rem;
+    --font-fluid-xxs: clamp(.6rem, .6rem + 1vw, 1.12rem);
     --font-fluid-xs: clamp(.8rem, .8rem + 1vw, 1.2rem);
+    --font-fluid-ssm: clamp(.9rem, .9rem + 1vw, 1.4rem);
     --font-fluid-sm: clamp(1rem, 1rem + 1vw, 1.5rem);
     --font-fluid-md: clamp(1rem, 1rem + 1.4vw, 1.8rem);
     --font-fluid-mdd: clamp(1.2rem, 1.2rem + 1.4vw, 2rem);
@@ -201,8 +203,8 @@ body {
 
 /* loader */
 .loader {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     display: block;
     margin: 15px auto;
@@ -219,8 +221,8 @@ body {
     left: 0;
     top: 0;
     background: var(--color-main);
-    width: 10px;
-    height: 10px;
+    width: 9px;
+    height: 9px;
     transform: translate(-50%, 50%);
     border-radius: 50%;
 }

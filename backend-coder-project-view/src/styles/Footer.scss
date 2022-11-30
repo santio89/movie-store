@@ -1,11 +1,16 @@
 .footer{
-    background: var(--color-segundo);
     padding: .4rem .8rem;
-    color: var(--color-tercero);
-    height: 8rem;
+    color: var(--color-white);
+    min-height: 8rem;
     border-top: 2px dashed var(--color-tercero);
     margin-top: 2rem;
-    background: linear-gradient(45deg, var(--color-main), var(--color-main-dark))
+    background: linear-gradient(45deg, var(--color-main), var(--color-main-dark));
+    font-size: var(--font-fluid-xs);
+
+    &__santi{
+        color: var(--color-gray-dark);
+        font-size: var(--font-fluid-xxs);
+    }
 }
 
 /* dark-light mode */

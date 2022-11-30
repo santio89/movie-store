@@ -4,7 +4,7 @@
     &__search{
         font-weight: bold;
         color: var(--color-tercero);
-        font-size: var(--font-fluid-sm);
+        font-size: var(--font-fluid-ssm);
         margin-bottom: 1em;
 
         select, option{
@@ -35,7 +35,7 @@
         display: flex;
         justify-content: start;
         align-items: center;
-        gap: 2rem;
+        gap: clamp(.8rem, .8rem + .8vw, 1.8rem);
         color: var(--color-main);
 
         img {
@@ -130,7 +130,7 @@
 
 .serverInfoBtn {
     font-weight: bold;
-    font-size: var(--font-fluid-sm);
+    font-size: var(--font-fluid-ssm);
     color: var(--color-main);
     background: var(--color-tercero);
     border-radius: .4rem;

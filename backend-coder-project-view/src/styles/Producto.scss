@@ -135,8 +135,8 @@
         border: 2px solid var(--color-segundo);
 
         button {
-            color: var(--color-segundo);
-            text-shadow: 2px 2px 0 var(--color-tercero);
+            color: var(--color-white);
+            text-shadow: 1px 1px 0 var(--color-gray-dark);
             font-size: var(--font-fluid-lg);
             font-weight: bold;
             position: absolute;
@@ -145,8 +145,7 @@
 
             &:hover,
             &:focus-visible {
-                color: var(--color-tercero);
-                text-shadow: 2px 2px 0 var(--color-segundo);
+                color: var(--color-main);
             }
         }
 

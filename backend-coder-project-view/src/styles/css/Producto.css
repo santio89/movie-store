@@ -128,8 +128,8 @@
   border: 2px solid var(--color-segundo);
 }
 .producto__imgModal button {
-  color: var(--color-segundo);
-  text-shadow: 2px 2px 0 var(--color-tercero);
+  color: var(--color-white);
+  text-shadow: 1px 1px 0 var(--color-gray-dark);
   font-size: var(--font-fluid-lg);
   font-weight: bold;
   position: absolute;
@@ -137,8 +137,7 @@
   right: 4%;
 }
 .producto__imgModal button:hover, .producto__imgModal button:focus-visible {
-  color: var(--color-tercero);
-  text-shadow: 2px 2px 0 var(--color-segundo);
+  color: var(--color-main);
 }
 .producto__imgModal::-webkit-backdrop {
   background: rgba(20, 20, 20, 0.8);

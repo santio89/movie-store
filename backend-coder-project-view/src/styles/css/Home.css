@@ -4,7 +4,7 @@
 .home__search {
   font-weight: bold;
   color: var(--color-tercero);
-  font-size: var(--font-fluid-sm);
+  font-size: var(--font-fluid-ssm);
   margin-bottom: 1em;
 }
 .home__search select, .home__search option {
@@ -31,7 +31,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 2rem;
+  gap: clamp(0.8rem, 0.8rem + 0.8vw, 1.8rem);
   color: var(--color-main);
 }
 .home__user img {
@@ -113,7 +113,7 @@
 
 .serverInfoBtn {
   font-weight: bold;
-  font-size: var(--font-fluid-sm);
+  font-size: var(--font-fluid-ssm);
   color: var(--color-main);
   background: var(--color-tercero);
   border-radius: 0.4rem;
