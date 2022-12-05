@@ -1,6 +1,7 @@
 # movie-store
 
 Proyecto Full-Stack - E-Commerce de películas
+Desarrollado para el curso de Backend en Coderhouse.
 
 
 
