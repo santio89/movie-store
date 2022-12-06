@@ -5,7 +5,7 @@ Desarrollado para el curso de Backend en Coderhouse.
 
 
 
--Frontend: ReactJS. Demo: https://movie-store-netlify.netlify.app/
+-Frontend: ReactJS. Demo: https://movie-store-front.netlify.app/
 
 
 
