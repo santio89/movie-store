@@ -23,7 +23,6 @@ Desarrollado para el curso de Backend en Coderhouse.
 
 
 
-Nota: el host render.com (donde está el backend) se 'duerme' al no estar en uso y luego tarda unos minutos en 'despertar' luego de una request.
 
 
 
