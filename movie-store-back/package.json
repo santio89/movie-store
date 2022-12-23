@@ -1,5 +1,5 @@
 {
-  "name": "backend-coder-project",
+  "name": "movie-store-back",
   "version": "1.0.0",
   "description": "Backend desarrollado en NodeJS con Express. DB: MongoDB",
   "main": "./src/server.js",
@@ -49,10 +49,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/santio89/backend-coder-project.git"
+    "url": "git+https://github.com/santio89/movie-store.git"
   },
   "bugs": {
-    "url": "https://github.com/santio89/backend-coder-project/issues"
+    "url": "https://github.com/santio89/movie-store/issues"
   },
-  "homepage": "https://github.com/santio89/backend-coder-project#readme"
+  "homepage": "https://github.com/santio89/movie-store#readme"
 }

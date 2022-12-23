@@ -1,4 +1,4 @@
-# backend-coder-project
+# movie-store-back
 
 Backend desarrollado en NodeJS con Express. DB: MongoDB
 
