@@ -36,11 +36,16 @@ export default function Chat() {
             console.log("error fetching login: ", e)
         }
 
+        /* quito espacios en blanco de los extremos y checkeo mensaje vacio */
+        const mensTrim = mensaje.trim();
+        if (mensTrim.length === 0){
+            return;
+        }
 
         /* objeto de mensaje */
         const mensajeEnvio = {
             author: user,
-            text: mensaje || " "
+            text: mensTrim || ""
         }
 
         setMensaje("");
