@@ -61,7 +61,7 @@ export default function Chat() {
     })
 
     useEffect(() => {
-        socket.emit("client:logged",);
+        user && socket.emit("client:logged",);
     }, [user])
 
     useEffect(() => {
