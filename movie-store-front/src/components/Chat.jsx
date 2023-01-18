@@ -61,8 +61,7 @@ export default function Chat() {
     })
 
     useEffect(() => {
-        user && socket.emit("client:logged",);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        socket.emit("client:logged",);
     }, [user])
 
     useEffect(() => {
@@ -70,7 +69,6 @@ export default function Chat() {
             chatRef.current.style.scrollBehavior = "auto";
             chatRef.current.scrollTop = chatRef.current.scrollHeight;
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [chatOpen])
 
     useEffect(() => {
