@@ -5,7 +5,7 @@ import { io } from "socket.io-client";
 import { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 
-const back = process.env.NODE_ENV === "production" ? "https://movie-store-back.up.railway.app/" : "http://localhost:8080/"
+const back = process.env.NODE_ENV === "production" ? "https://movie-store-back.onrender.com/" : "http://localhost:8080/"
 const socket = io(back, {
      withCredentials: true,
      transports: ['websocket', 'polling'],
