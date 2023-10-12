@@ -9,7 +9,7 @@ Desarrollado para el curso de Backend en Coderhouse.
 
 
 
--Backend: Node-Express-Mongo. Demo https://movie-store-back.onrender.com/
+-Backend: Node-Express-Mongo. Demo https://movie-store-back.onrender.com/ (host render free plan, se duerme y despierta en request)
 
 
 
